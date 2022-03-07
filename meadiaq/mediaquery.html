@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border : 10px solid green;
+            font-style: normal;
+            font-size: 60px;
+        }
+       
+        @media(min-width:1200px){/*min 화면의 크기가 최소한 1200이다. 즉 1200보다 크다면 밑의 div코드 동작*/
+            div{
+            display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Responsive
+    </div>
+</body>
+</html>

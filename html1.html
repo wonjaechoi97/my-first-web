@@ -35,9 +35,23 @@
         #grid ul{
             padding-left: 33px;
         }
-        article{
+        #grid article{
             padding: 25px;
             padding-top: 0px;
+        }
+        /*screen width < 800px 조건추가*/
+        @media(max-width:800px){
+            #grid{
+            display : block;
+            }
+            ul{
+            border-right:none;
+           }
+           h1{
+               border-bottom: none;
+           }
+
+
         }
     </style>
     <title>원인</title>

@@ -5,21 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #grid
+        
         h1{
-            font-size: 60px;
+            font-size: 45px;
             text-align: center;
+            margin: 0px;
+            padding: 30px;
+            border-bottom: solid 1px gray;
         }
         a{
             color : black;
             text-decoration: none;
+            font-size: 20px;
         }
-        .saw{
-            color:gray
-
+        ul{
+            margin : 0px;
+            width :100px;
+            padding: 20px;
+            padding-left:33px ;
+            border-right: solid 1px gray;
         }
-        #active{
-            color : blue;
+        #grid{
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        
+        #article{
+            padding-top: 0px;
+            padding-left: 25px;
+        }
+        @media(max-width:800px){
+            #grid{
+            display: block;
+            
+            }
+            ul{
+            
+            border-right: none;
+            }
         }
     </style>
     </style>
@@ -30,13 +53,13 @@
         <h1>2022년 러시아의 우크라이나 침공</h1>
     </header>
     <div id="grid">
-        <ol>
+        <ul>
             <li><a href="html1.html" class="saw">원인</a></li>
             <!--id값은 중복x-->
             <li><a href="html2.html" class="saw" id="active" >전선</a></li>
             <li><a href="html3.html"class="saw">전개</a></li>
-        </ol><!-- 그룹핑을 위한 부모 태그 ul-->
-        <div>
+        </ul><!-- 그룹핑을 위한 부모 태그 ul-->
+        <div id = "article">
             <p>
                 2월 24일, 남오세티야 전쟁 때 썼던 방법과 똑같은 방법으로 예상된 모든 침공 경로(크게 북부, 중부, 남부의 3개 경로)로 
                 침공하여 2022년 우크라이나와 러시아 간의 전쟁이 발발하였다.
