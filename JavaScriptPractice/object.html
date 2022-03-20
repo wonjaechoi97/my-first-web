@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //리터럴
+      var student = {
+        name: "최원재",
+        area: "대전",
+        class: "5반",
+        info: function () {
+          //일급객체*****
+          console.log(
+            `이름: ${student.name} 지역: ${student.area}  반: ${student.class}`
+          );
+        },
+      };
+      console.log(student);
+      student.info();
+
+      //오브젝트 생성자
+      var student2 = new Object();
+      student2.name = "최원재";
+      student2["area"] = "서울";
+      student2.class = "7반";
+      student2.info = function () {
+        console.log(
+          `이름: ${student2.name} 지역: ${student2.area}  반: ${student2.class}`
+        );
+      };
+      // [     ],    "." 이용하는 두가지 방법이 있다.
+
+      delete student2.class;
+      console.log(student2.class);
+
+      console.log(student2);
+      student2.info();
+    </script>
+  </body>
+</html>

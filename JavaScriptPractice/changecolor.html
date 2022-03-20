@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test1 {
+        background-color: cyan;
+        color: blue;
+        font-weight: bold;
+      }
+      .test2 {
+        background-color: pink;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        document.getElementsByTagName("h3")[0].setAttribute("class", "test1");
+        //부모 노드의 속성값 얻어오기
+
+        //
+        //button 누르면 색 변하기
+        var change = document.getElementsByTagName("h1")[0];
+        let flag = true;
+        document
+          .getElementById("colorbtn")
+          .addEventListener("click", function () {
+            var name = document
+              .querySelector("#colorbtn")
+              .parentElement.getAttribute("my-name");
+            alert(name);
+
+            var text = document.querySelectorAll("input[name='내용']")[0].value;
+            alert(text);
+            if (flag) {
+              change.setAttribute("class", "test1");
+              flag = !flag;
+            } else {
+              flag = !flag;
+              change.setAttribute("class", "test2");
+            }
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>h1111</h1>
+    <h2>h2222</h2>
+    <h3>h3333</h3>
+    <h4>h4444</h4>
+    <div my-name="최원재">
+      <input type="text" name="내용" />
+      <button id="colorbtn">누르면 색변환</button>
+    </div>
+  </body>
+</html>
